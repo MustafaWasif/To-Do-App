@@ -4,7 +4,7 @@ var mongoose = require("mongoose");
 var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 //Connecting to the database
-mongoose.connect("mongodb+srv://mustafa:wasif@cluster0-aawk0.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://mustafa:wasif@cluster0-aawk0.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 
 //Creating a Schema
 var todoSchema = new mongoose.Schema({
