@@ -14,5 +14,5 @@ app.use(express.static("./public"));
 
 
 //Listen to a port
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT, process.env.IP);
 console.log("To-do app running");
