@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    font-family: tahoma;
+    padding: 0;
+    /* background-color: rgb(0, 102, 255); */
+    /* font-size: 100px; */
+	
+}
+body{
+    background: #0d1521;
+    color: orange;
+}
+#todo-table{
+    position: relative; 
+    background-color: #090d13;
+    /* margin-top: 10%; */
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    box-sizing: border-box;
+}
+input[type="text"]{
+    background: #181c22;
+    color: orange;
+    /* border: 2px solid gray; */
+    border: 0;
+    float: left;
+    padding: 15px;
+    font-size: 20px;
+    width: 70%;
+}
+button{
+    background: #23282e;
+    color: #fff;
+    /* border: 2px solid gray; */
+    border: 0;
+    float: left;
+    padding: 15px;
+    font-size: 20px;
+    width: 25%;
+    box-sizing: border-box;
+}
+#todo-table form::after{
+    content: "";
+    display: block;
+    clear: both;
+    /* margin-top: 10px; */
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+li{
+    /* margin: 10px 0px; */
+    padding: 20px;
+    width: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+li:hover{
+    text-decoration: line-through;
+    background: rgba(0,0,0,0.2);
+    
+}
+/*
+h1{
+    color: pink;
+}*/
