@@ -14,6 +14,9 @@ var todoSchema = new mongoose.Schema({
 var TodoModel = mongoose.model("Todo", todoSchema);
 module.exports = function(app){
 
+    app.get("/", function(req, res){
+        res.redirect("/todo");
+    });
     
     app.get("/todo", function(req, res){
         TodoModel.find({}, function(err, data){
