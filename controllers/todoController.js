@@ -11,7 +11,8 @@ mongoose.connect("mongodb+srv://mustafa:wasif@cluster0-aawk0.mongodb.net/test?re
      useFindAndModify: false,
      useCreateIndex: true
     });
-var db = mongoose.connection;
+//var db = mongoose.connection;
+
 //Creating a Schema
 var todoSchema = new mongoose.Schema({
     item: String
