@@ -6,7 +6,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: 'POST',
-            url: '/',
+            url: '/todo',
             data: todo,
 
             //Receive the data from res.json(data)
@@ -23,7 +23,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "DELETE",
-            url: "/" + dashed_item,
+            url: "/todo/" + dashed_item,
 
             success: function(data){
                 location.reload();
