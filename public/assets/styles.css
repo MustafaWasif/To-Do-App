@@ -6,10 +6,19 @@
     /* font-size: 100px; */
 	
 }
+
 body{
     background: #0d1521;
     color: orange;
+    margin-top: 10%;
 }
+
+h2{
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+}
+
 #todo-table{
     position: relative; 
     background-color: #090d13;
@@ -19,6 +28,7 @@ body{
     width: 80%;
     box-sizing: border-box;
 }
+
 input[type="text"]{
     background: #181c22;
     color: orange;
@@ -29,6 +39,7 @@ input[type="text"]{
     font-size: 20px;
     width: 70%;
 }
+
 button{
     background: #23282e;
     color: #fff;
@@ -40,17 +51,24 @@ button{
     width: 25%;
     box-sizing: border-box;
 }
+
+button:hover{
+    filter: brightness(300%);
+}
+
 #todo-table form::after{
     content: "";
     display: block;
     clear: both;
     /* margin-top: 10px; */
 }
+
 ul{
     list-style-type: none;
     padding: 0;
     margin-top: 10px;
 }
+
 li{
     /* margin: 10px 0px; */
     padding: 20px;
@@ -59,6 +77,7 @@ li{
     box-sizing: border-box;
     cursor: pointer;
 }
+
 li:hover{
     text-decoration: line-through;
     background: rgba(0,0,0,0.2);
