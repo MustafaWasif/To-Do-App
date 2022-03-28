@@ -25,6 +25,7 @@ module.exports = function(app){
         res.redirect("/todo");
     });
     
+    // Gets Data from Database and passes the todo items, i.e., "data", to the frontend (which appears below the form)
     app.get("/todo", function(req, res){
         TodoModel.find({}, function(err, data){
             if (err) throw err;
@@ -33,6 +34,8 @@ module.exports = function(app){
         
     });
 
+    // User inputted items are post to database and saved in there.
+    // req.body reads user input
     app.post("/todo", urlencodedParser, function(req, res){
         //console.log(req.body);
         var newTodoItem = TodoModel(req.body).save(function(err, data){
@@ -43,7 +46,9 @@ module.exports = function(app){
     });
 
     app.delete("/todo/:dashed_item", function(req, res){
-        TodoModel.find({item: req.params.dashed_item.replace(/\-/g, " ")}).deleteOne(function(err, data){
+        
+        TodoModel.find({item: req.params.dashed_item.replace(/\~`/g, " ")}).deleteOne(function(err, data){
+            console.log(data);
             if (err) throw err;
             res.json(data);
         });

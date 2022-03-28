@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     $("li").on("click", function(){
 
-        var dashed_item = $(this).text().trim().replace(/ /g, "-");
+        var dashed_item = $(this).text().trim().replace(/ /g, "~`");
 
         $.ajax({
             type: "DELETE",
